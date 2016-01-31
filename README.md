@@ -52,4 +52,8 @@ I actually completely love git now. i <3 git.
 
 I am going to commit these changes, merge them with the master branch, and sync it with the server now. 
 
+<<<<<<< Updated upstream
 This might be a really incoherent explanation, 
+=======
+This might be a really incoherent explanation, so please ask if you have any questions or would like some clarification. It seems kind of weird, but it's actually really simple! :)
+>>>>>>> Stashed changes
