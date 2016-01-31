@@ -39,4 +39,17 @@ When you first clone the project locally you will have to:
 
 
 Regarding branches:
-It's easy to create branches, you just hit the create branch button. 
+It's easy to create branches, you just hit the create branch button. And give it a name etc. It's also easy to merge branches, but I have written quite a lot right now, so I will talk a bit more about that later. 
+
+You can have as many branches as you want and you can branch from any existing branch, not just off of master. 
+
+But yeah, basically it's better to do work in a branch, and then merge it later into master. 
+
+
+I hope I didn't make this seem to complicated, it's actually really quite simple. One nice thing with git is that it's actually really hard to mess things up. Everything stays really clean and tidy and if something goes wrong it's easy to revert that, so don't be afraid to experiment!! 
+
+I actually completely love git now. i <3 git. 
+
+I am going to commit these changes, merge them with the master branch, and sync it with the server now. 
+
+This might be a really incoherent explanation, 
