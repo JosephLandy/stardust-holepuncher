@@ -1,12 +1,7 @@
-<<<<<<< HEAD
-x
-=======
+
 # Hi Peter + Alex, this is the gitignore file. Basically if you have any files or directories you don't want to be tracked by git, or synced to the server,
 # you put them in this file. It's pretty self explanatory. Lines starting with # are comments. Feel free to add whatever files you want to keep out.
 
-
-
->>>>>>> jl-misc
 ## Joseph added:
 
 holepuncher/Library/
