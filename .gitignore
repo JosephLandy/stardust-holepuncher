@@ -104,7 +104,7 @@ build/
 *_i.c
 *_p.c
 *.ilk
-#*.meta # Joseph commented this out. I think it was important to do this. We are supposed to version control WITH the metafiles. 
+#*.meta # Joseph commented this out. I think it was important to do this. We are supposed to version control WITH the metafiles.
 *.obj
 *.pch
 *.pdb
