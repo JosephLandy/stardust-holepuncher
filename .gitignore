@@ -3,7 +3,8 @@
 # you put them in this file. It's pretty self explanatory. Lines starting with # are comments. Feel free to add whatever files you want to keep out.
 
 ## Joseph added:
-
+holepuncher/Assets/rock_01/
+holepuncher/Assets/rock_01.meta
 holepuncher/Library/
 holepuncher/Temp/
 holepuncher/obj/
