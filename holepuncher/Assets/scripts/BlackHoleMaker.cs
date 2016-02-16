@@ -2,7 +2,6 @@
 using System.Collections;
 
 public class BlackHoleMaker : MonoBehaviour {
-
     public GameObject holePrefab;
 
     void Update() {
@@ -14,6 +13,7 @@ public class BlackHoleMaker : MonoBehaviour {
 
         if (Input.GetMouseButtonDown(0)) {
             createHole();
+            
         }
     }
 
