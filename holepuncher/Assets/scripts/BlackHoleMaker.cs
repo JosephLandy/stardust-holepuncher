@@ -27,7 +27,7 @@ public class BlackHoleMaker : MonoBehaviour {
     }
 
     public void makeBlackHole(Vector3 position) {
-        GameObject hole = (GameObject)Instantiate(holePrefab, position, Quaternion.identity);
+        GameObject hole = (GameObject) Instantiate(holePrefab, position, Quaternion.identity);
         //Instantiate returns an Object (unity class, not java base class). Must cast into a game object. 
 
         hole.transform.parent = gameObject.transform; //parent the hole to the hole manager game object
