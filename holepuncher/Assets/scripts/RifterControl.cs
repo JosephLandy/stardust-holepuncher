@@ -1,5 +1,7 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 using System.Collections;
+
 
 public class RifterControl : MonoBehaviour
 {
@@ -101,7 +103,7 @@ public class RifterControl : MonoBehaviour
 		transform.localScale = theScale;
 	}
 
-	private void applyFriction(){
+	private void applyFriction() {
 		//since this function is only called from within an if statement saying (m_Grounded && absSpeed == 0f), we can assume the player is on the ground and not trying to move
 		Vector2 tempVect = new Vector2(m_rb2D.velocity.x, m_rb2D.velocity.y);
 		tempVect.x /= m_FakeFriction;
@@ -109,4 +111,20 @@ public class RifterControl : MonoBehaviour
 			tempVect.x = 0;
 		m_rb2D.velocity = tempVect;
 	}
+
+    private void OnCollisionEnter2D(Collision2D col) {
+        if (col.collider.CompareTag("Fatal")) {
+            killme();
+        }
+        
+    }
+
+
+
+    //Joseph here: I'm adding a method, to kill the player and reload the scene. It can be called by other objects, or within this class.
+    public void killme() {
+        // call when player needs to be killed. 
+        Debug.Log("kill me called, reloading scene");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
 }

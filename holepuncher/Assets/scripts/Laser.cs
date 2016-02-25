@@ -14,5 +14,11 @@ public class Laser : MonoBehaviour {
         // note: position 0 will always be at (0,0,0) relative to the object.
         RaycastHit2D hit = Physics2D.Raycast(transform.TransformPoint(Vector3.zero), -transform.up);
         visual.SetPosition(1, transform.InverseTransformPoint(hit.point));
+
+        if (hit.collider.CompareTag("Player")) {
+            // if the object hit by the laser is the Player. Kill the player.
+            hit.collider.gameObject.SendMessage("killme");
+
+        }
     }
 }
