@@ -29,6 +29,7 @@ public class WhiteHoleMaker : MonoBehaviour {
 		GameObject hole = (GameObject)Instantiate(holePrefab, position, Quaternion.identity);
 		//Instantiate returns an Object (unity class, not java base class). Must cast into a game object. 
 
+		closeAllHoles ();
 		hole.transform.parent = gameObject.transform; //parent the hole to the hole manager game object
 
 	}

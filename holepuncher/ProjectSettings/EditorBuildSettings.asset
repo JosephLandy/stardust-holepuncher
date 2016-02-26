@@ -7,3 +7,5 @@ EditorBuildSettings:
   m_Scenes:
   - enabled: 1
     path: Assets/scenes/testing/josephs_testScene.unity
+  - enabled: 1
+    path: Assets/scenes/final/level1.unity
