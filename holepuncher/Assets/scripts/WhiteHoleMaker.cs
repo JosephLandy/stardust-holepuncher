@@ -8,7 +8,6 @@ public class WhiteHoleMaker : MonoBehaviour {
 	void Update() {
 		//closeHoles is mapped to the c button. 
 		if (Input.GetButtonDown("closeHoles")) {
-			Debug.Log("close holes pressed.");
 			closeAllHoles();
 		}
 
