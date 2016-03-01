@@ -39,14 +39,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a03d1c1a57fc1204599d08ec0b69f0cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  holePrefab: {fileID: 173724, guid: 997ad03d505715949a88c6a9c209ebea, type: 2}
+  holePrefab: {fileID: 191364, guid: 997ad03d505715949a88c6a9c209ebea, type: 2}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: holePrefab
+      value: 
+      objectReference: {fileID: 191364, guid: 997ad03d505715949a88c6a9c209ebea, type: 2}
+    - target: {fileID: 0}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 198712}
