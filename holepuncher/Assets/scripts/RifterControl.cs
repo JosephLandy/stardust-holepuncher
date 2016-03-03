@@ -68,8 +68,8 @@ public class RifterControl : MonoBehaviour
 		//What if the speed is pushed above our decided speed limit by an external force? Well, we don't do anything.
 		//We don't need to do anything, and if we do, we might mess up the otherwise natural motion.
 
-		print (hSpeed);
-		print (m_rb2D.velocity);
+		//print (hSpeed);
+		//print (m_rb2D.velocity);
 
 
 		// If the input is moving the player right and the player is facing left, flip the player
