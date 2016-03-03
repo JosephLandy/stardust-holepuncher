@@ -13,7 +13,8 @@ public class Laser : MonoBehaviour {
 
 	void Update () {
         // note: position 0 will always be at (0,0,0) relative to the object.
-        RaycastHit2D hit = Physics2D.Raycast(transform.TransformPoint(Vector3.zero), -transform.up);
+		// alex note: To get it to ignore the holes layer, I'm making it collide with everything but the holes layer
+		RaycastHit2D hit = Physics2D.Raycast(transform.TransformPoint(Vector3.zero), -transform.up, Mathf.Infinity, LayerMask.NameToLayer("holes"));
         visual.SetPosition(1, transform.InverseTransformPoint(hit.point));
 
         // the sparks component should always be located at the point of contact, and be oriented along the normal of the surface hit by the laser. 
