@@ -1708,6 +1708,7 @@ GameObject:
   - 4: {fileID: 600164769}
   - 212: {fileID: 600164770}
   - 61: {fileID: 600164771}
+  - 114: {fileID: 600164772}
   m_Layer: 0
   m_Name: Metal_ShippingContainerSideDirty_1k_d5
   m_TagString: Untagged
@@ -1771,6 +1772,17 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Size: {x: 4, y: 4}
+--- !u!114 &600164772
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 600164768}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e167a90fef1cefd4ca0397c855f4ab9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &612053683
 GameObject:
   m_ObjectHideFlags: 0
