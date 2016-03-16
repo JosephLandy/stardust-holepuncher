@@ -58,6 +58,7 @@ public class RifterControl : MonoBehaviour
 		m_Anim.SetFloat("Speed", absSpeed);
 
 		//Movement calculations ------
+        //JL note - here is where we might be able to check a boolean to not add speed if at a wall. 
 		if (hSpeed < 0 && m_rb2D.velocity.x > 0 || hSpeed > 0 && m_rb2D.velocity.x < 0)		//If the player is trying to move in the opposite direction than they are actually moving
 			m_rb2D.velocity += new Vector2 (hSpeed * m_MaxSpeed, 0f);							//add the calculated speed.
 		else if (Mathf.Abs (m_rb2D.velocity.x) < m_MaxSpeed) {								//If the player is not at the speed limit but wants to be
