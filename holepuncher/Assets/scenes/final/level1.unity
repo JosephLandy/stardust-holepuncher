@@ -2996,6 +2996,10 @@ GameObject:
   m_Component:
   - 4: {fileID: 669086229}
   - 33: {fileID: 669086228}
+<<<<<<< HEAD
+=======
+  - 23: {fileID: 669086230}
+>>>>>>> origin/master
   - 61: {fileID: 669086227}
   m_Layer: 0
   m_Name: laser_kill_floor
@@ -3037,6 +3041,32 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 15
+--- !u!23 &669086230
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 669086226}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_Materials:
+  - {fileID: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 1
+  m_ReflectionProbeUsage: 1
+  m_ProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
 --- !u!1 &687828391
 GameObject:
   m_ObjectHideFlags: 0
@@ -8401,7 +8431,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 412346, guid: 520dccd567d73854aa4a4afa3cce8373, type: 2}
       propertyPath: m_RootOrder
-      value: 10
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 475150, guid: 520dccd567d73854aa4a4afa3cce8373, type: 2}
       propertyPath: m_LocalRotation.z
