@@ -1,0 +1,9 @@
+
+USING ASSETS AND BEST PRACTICES
+
+Most of the assets that should be used for constructing levels are not located in the sprites folder. The versions that should be used are prefabs and are located in the prefabs folder. "Building materials" are in the folder `prefabs/structural`.
+
+I think as a general rule of thumb, anything that will be used more than once should be made into a prefab, and the additional copies added by instantiating the prefab. That way, if any updates are needed to these items they can be applied to all of them at once.
+
+Even if you need variations and stuff with differing things, it's still better if it's a prefab, since you can break
+the link to the prefab easily.  
