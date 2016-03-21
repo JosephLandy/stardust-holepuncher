@@ -264,3 +264,9 @@ pip-log.txt
 .mr.developer.cfg
 holepuncher/Assets/UnityVS.meta
 holepuncher/Assets/scenes/experiments/joseph_animExperiments1.unity.meta
+
+holepuncher/Assets/Editor/CrossPlatformInput.meta
+
+holepuncher/Assets/Editor/CrossPlatformInput/CrossPlatformInputInitialize.cs
+
+holepuncher/Assets/Editor/CrossPlatformInput/CrossPlatformInputInitialize.cs.meta
