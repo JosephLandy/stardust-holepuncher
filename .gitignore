@@ -11,7 +11,7 @@ holepuncher/obj/
 holepuncher/ProjectSettings/ProjectSettings.asset
 holepuncher/ProjectSettings/GraphicsSettings.asset
 holepuncher/Assets/UnityVS/
-*holepuncher/Assets/Editor/
+#holepuncher/Assets/Editor/
 holepuncher/Assets/Standard Assets/
 holepuncher/Assets/scenes/experiments/joseph_animExperiments1.unity
 
