@@ -34,14 +34,14 @@ public class fakeDynamicCamera : MonoBehaviour {
 		if (mode == 1) {
 			posX = Mathf.SmoothDamp (transform.position.x, 32.61f, ref velocity.x, smoothTime * 50);		//change the time to change how quickly the camera transitions
 			posY = Mathf.SmoothDamp (transform.position.y, -5.3f, ref velocity.y, smoothTime * 50);			//32.61f and -5.3f are the center of the puzzle area, don't change. 
-			camera.orthographicSize = Mathf.SmoothDamp (camera.orthographicSize, 7.0f, ref dumbfloatidk, smoothTime * 50);
+			camera.orthographicSize = Mathf.SmoothDamp (camera.orthographicSize, 6.5f, ref dumbfloatidk, smoothTime * 50);
 			transform.position = new Vector3 (posX, posY, transform.position.z);
 		} else if (mode == 2) {
 			posX = Mathf.SmoothDamp (transform.position.x, player.transform.position.x, ref velocity.x, smoothTime*20);
 			posY = Mathf.SmoothDamp (transform.position.y, player.transform.position.y, ref velocity.y, smoothTime*20);
 			camera.orthographicSize = Mathf.SmoothDamp (camera.orthographicSize, originalSize, ref dumbfloatidk, smoothTime*20);
 			transform.position = new Vector3 (posX, posY, transform.position.z);
-			if ((int) transform.position.x == (int) player.transform.position.x && (int) transform.position.y == (int) player.transform.position.y) mode = 0;
+			if (Mathf.Abs(transform.position.x - player.transform.position.x) < 0.1 && Mathf.Abs(transform.position.y - player.transform.position.y) < 0.1) mode = 0;
 		}
 
 		else {		//normal camera movement
