@@ -3,7 +3,7 @@ using UnityEngine.SceneManagement;
 using System.Collections;
 
 
-public class RifterControl : MonoBehaviour
+public class RifterControl_gm : MonoBehaviour
 {
 	[SerializeField] private float m_MaxSpeed = 10f;                    // The fastest the player can WALK in the x axis.
 	[SerializeField] private float m_JumpForce = 400f;                  // Amount of force added when the player jumps.
@@ -113,19 +113,19 @@ public class RifterControl : MonoBehaviour
 		m_rb2D.velocity = tempVect;
 	}
 
-    //private void OnCollisionEnter2D(Collision2D col) {
-    //    if (col.collider.CompareTag("Fatal")) {
-    //        killme();
-    //    }
+    private void OnCollisionEnter2D(Collision2D col) {
+        if (col.collider.CompareTag("Fatal")) {
+            killme();
+        }
         
-    //}
+    }
 
 
 
     //Joseph here: I'm adding a method, to kill the player and reload the scene. It can be called by other objects, or within this class.
-    //public void killme() {
-    //    // call when player needs to be killed. 
-    //    Debug.Log("kill me called, reloading scene");
-    //    SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-    //}
+    public void killme() {
+        // call when player needs to be killed. 
+        Debug.Log("kill me called, reloading scene");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
 }
