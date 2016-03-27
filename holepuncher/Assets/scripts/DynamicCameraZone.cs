@@ -5,6 +5,7 @@ public class DynamicCameraZone : MonoBehaviour {
 	private fakeDynamicCamera cameraScript;
 
 	public Vector2 centerPosition;		//use this to determine where the camera will go when the player enters this area
+	public bool lockCamera = true;
 	public float scaleFactor;			//use this to determine how far the camera zooms out
 
 	void Start (){
@@ -13,7 +14,10 @@ public class DynamicCameraZone : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D col){
 		if (col.gameObject.tag == "Player") {
-			cameraScript.SetMode(1, centerPosition, scaleFactor);
+			if (!lockCamera){
+				cameraScript.SetMode (3, centerPosition, scaleFactor);
+			}
+			else cameraScript.SetMode(1, centerPosition, scaleFactor);
         }
     }
 
