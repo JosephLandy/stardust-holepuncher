@@ -18,8 +18,10 @@ public class RifterControl : MonoBehaviour
 	private Animator m_Anim;            // Reference to the player's animator component.
 	private Rigidbody2D m_rb2D;
 	private bool m_FacingRight = true;  // For determining which way the player is currently facing.
-	private int m_signFlip = 1; 			// Set to either 1 or -1
+	private int m_signFlip = 1; 		// Set to either 1 or -1
 
+    //jl added
+    private AudioSource jumpSound;
 	private void Awake()
 	{
 		// Setting up references.
@@ -28,6 +30,8 @@ public class RifterControl : MonoBehaviour
 		m_WhatIsGround = 1;		//LayerMask 1 is "Default"; if you wanna change it while testing, sure, but it should be default by default.
 		m_Anim = GetComponent<Animator>();
 		m_rb2D = GetComponent<Rigidbody2D>();
+
+        jumpSound = GetComponent<AudioSource>();
 	}
 
 
@@ -79,12 +83,13 @@ public class RifterControl : MonoBehaviour
 		else if (hSpeed < 0 && m_FacingRight) Flip();
 
 		// If the player should jump...
-		if (m_Grounded && jump && m_Anim.GetBool("Ground"))
+		if (m_Grounded && jump && m_Anim.GetBool("Ground")) // Here is where the jump shout audio file should play.
 		{
 			// Add a vertical force to the player.
 			m_Grounded = false;
 			m_Anim.SetBool("Ground", false);
 			m_rb2D.AddForce(new Vector2(0f, m_JumpForce));
+            jumpSound.Play();
 		}
 
 
