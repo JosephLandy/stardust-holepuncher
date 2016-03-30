@@ -1721,7 +1721,7 @@ PointEffector2D:
   m_UseColliderMask: 1
   m_ColliderMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 2049
   m_ForceMagnitude: 25
   m_ForceVariation: 0
   m_DistanceScale: 1
@@ -1797,6 +1797,10 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: m_Pitch
       value: 1.38
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_ColliderMask.m_Bits
+      value: 2049
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

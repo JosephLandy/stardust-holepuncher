@@ -2,10 +2,10 @@
 using System.Collections;
 
 public class RightMovingLaserScript : MonoBehaviour {
-	public float moveSpeed = 0.01f;
+	public float moveSpeed = 0.03f;
 	private Vector3 pos;
 	private bool heightShifted = false;
-	private int identity;
+	[HideInInspector] public int identity;
 	public bool active;
 	public GameObject laserpair;
 
@@ -15,8 +15,9 @@ public class RightMovingLaserScript : MonoBehaviour {
 	void Start () {
 		string lasername = name;
 		identity = lasername [6] - 48;	//"mlaserX"
-		if (identity < 3) active = true;
-		else active = false;
+		//if (identity < 3) active = true;
+		//else active = false;
+		//active = false;
 	}
 
 	/*void heightShift(float newHeight){
@@ -45,7 +46,7 @@ public class RightMovingLaserScript : MonoBehaviour {
 			}
 
 		}
-		if (!active) {
+		if (!active && identity >= 3) {
 			if (transform.position.x < laserpair.transform.position.x) {
 				pos.x = laserpair.transform.position.x;
 				active = true;
