@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class fakeDynamicCamera : MonoBehaviour {
 	private Vector2 velocity;
@@ -21,6 +22,8 @@ public class fakeDynamicCamera : MonoBehaviour {
 	private float originalScale;
 	private float dumbfloatidk;
 
+	private Scene scene;
+
 	// Use this for initialization
 	void Start () {
 		player = GameObject.FindGameObjectWithTag ("Player");//.transform.position;
@@ -28,6 +31,8 @@ public class fakeDynamicCamera : MonoBehaviour {
 		camera = this.GetComponent<Camera>();
 		mode = 0;
 		originalScale = camera.orthographicSize;
+		scene = SceneManager.GetActiveScene ();
+
 	}
 
 	public void SetMode (int mode, Vector2 targetPos, float targetScale){ //this specifically works with DynamicCameraZone.cs
@@ -56,6 +61,7 @@ public class fakeDynamicCamera : MonoBehaviour {
 			//transform.position = new Vector3 (posX, -8.5f, transform.position.z);
 		} else if (mode == 2) {
 			smoothTime *= 20f;
+			targetPos = playerPos;
 			//posX = Mathf.SmoothDamp (transform.position.x, playerPos.x, ref velocity.x, smoothTime);
 			//posY = Mathf.SmoothDamp (transform.position.y, playerPos.y, ref velocity.y, smoothTime);
 			//camera.orthographicSize = Mathf.SmoothDamp (camera.orthographicSize, originalScale, ref dumbfloatidk, smoothTime);
@@ -65,18 +71,19 @@ public class fakeDynamicCamera : MonoBehaviour {
 				mode = 0;
 		} else {		//normal camera movement
 			targetScale = originalScale;
+			targetPos = playerPos;
 			//posX = Mathf.SmoothDamp (transform.position.x, playerPos.x, ref velocity.x, smoothTime);
 			//posY = Mathf.SmoothDamp (transform.position.y, playerPos.y, ref velocity.y, smoothTime);
 			//camera.orthographicSize = Mathf.SmoothDamp (camera.orthographicSize, originalScale, ref dumbfloatidk, smoothTime);
 			//transform.position = new Vector3 (posX, posY, transform.position.z);
-			//transform.position = new Vector3 (posX, -8.5f, transform.position.z);
 		}
-		posX = Mathf.SmoothDamp (transform.position.x, playerPos.x, ref velocity.x, smoothTime);
-		posY = Mathf.SmoothDamp (transform.position.y, playerPos.y, ref velocity.y, smoothTime);
+		posX = Mathf.SmoothDamp (transform.position.x, targetPos.x, ref velocity.x, smoothTime);
+		posY = Mathf.SmoothDamp (transform.position.y, targetPos.y, ref velocity.y, smoothTime);
 		if (mode == 3) smoothTime *= 50f;
 		camera.orthographicSize = Mathf.SmoothDamp (camera.orthographicSize, targetScale, ref dumbfloatidk, smoothTime);
-		//transform.position = new Vector3 (posX, posY, transform.position.z);
-		transform.position = new Vector3 (posX, -8.5f, transform.position.z);
+		if (scene.name == "scene2") posY = -8.5f;
+		transform.position = new Vector3 (posX, posY, transform.position.z);
+		//transform.position = new Vector3 (posX, -8.5f, transform.position.z);
 	}
 }
 
