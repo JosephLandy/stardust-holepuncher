@@ -52,8 +52,7 @@ public class fakeDynamicCamera : MonoBehaviour {
 			//camera.orthographicSize = Mathf.SmoothDamp (camera.orthographicSize, targetScale, ref dumbfloatidk, smoothTime);
 			//transform.position = new Vector3 (posX, posY, transform.position.z);
 		} else if (mode == 3) {
-			playerPos.x += targetPos.x;
-			playerPos.y += targetPos.y;
+			targetPos = playerPos;
 			//posX = Mathf.SmoothDamp (transform.position.x, playerPos.x + targetPos.x, ref velocity.x, smoothTime);	
 			//posY = Mathf.SmoothDamp (transform.position.y, playerPos.y + targetPos.y, ref velocity.y, smoothTime);
 			//camera.orthographicSize = Mathf.SmoothDamp (camera.orthographicSize, targetScale, ref dumbfloatidk, smoothTime * 50);
